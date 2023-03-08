@@ -21,6 +21,7 @@ suite = {
     "Spade": 1
 }
 
+
 class Card:
     _group: str
     _suite: str
