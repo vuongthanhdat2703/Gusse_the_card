@@ -11,7 +11,7 @@ class Desk:
     def init_desk(sefl):
         for group_item in group.keys():
             for suite_item in suite.keys():
-                card = Card(group_item,suite_item)
+                card = Card(group_item, suite_item)
                 sefl._cards.append(card)
 
     def pick_card(sefl):

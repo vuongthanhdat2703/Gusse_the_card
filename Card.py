@@ -26,7 +26,6 @@ greatest_card = {
      "Red Joker" :99
 }
 
-
 class Card:
     _group: str
     _suite: str
@@ -35,7 +34,6 @@ class Card:
     def __init__(self, group: str, suite: str) -> None:
         self._group = group
         self._suite = suite
-        # self._greatest_card = _greatest_card
         pass
 
     def __str__(self) -> str:
