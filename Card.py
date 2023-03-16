@@ -21,15 +21,25 @@ suite = {
     "Spade": 1
 }
 
+greatest_card = {
+     "Black Joker" : 98,
+     "Red Joker" :99
+}
+
 
 class Card:
     _group: str
     _suite: str
 
+
     def __init__(self, group: str, suite: str) -> None:
         self._group = group
         self._suite = suite
+        # self._greatest_card = _greatest_card
         pass
+
+    def __str__(self) -> str:
+            return f"{self._group} of {self._suite}s"
 
     def is_greater_than(self, card) -> bool:
         this_group = self._group
@@ -45,3 +55,18 @@ class Card:
                 return True
         else:
             return True
+
+# cards = []
+
+# for group_value in group.keys():
+#         for suite_value in suite.keys():
+#             card = Card(group_value, suite_value)
+#             cards.append(card)
+
+# black_joker = Card("Black Joker","")
+# red_joker = Card("Red Joker","")
+# cards.append(black_joker)
+# cards.append(red_joker)
+
+# for card in cards:
+#     print(str(card))

@@ -1,8 +1,9 @@
 from Card import Card
 from Desk import Desk
+import os
 
 desk = Desk()
-
+clear = lambda: os.system('cls')
 class Match:
     _reward = 0
     _wining_reward = 20
@@ -13,7 +14,7 @@ class Match:
         pass
 
     def display_card(sefl, player : str , card : Card):
-        print(f'=> {player} card:[{card._group}{card._suite}]')
+        print(f'=> {player} card: [{card._group} {card._suite}] ')
 
     def add_reward(self):
         self._reward += self._wining_reward
@@ -24,6 +25,7 @@ class Match:
 
     def start(self):
         while (self._is_playing):
+            clear()
             print(f'==== Round {self._round} ====')
             picker = desk.pick_card()
             
@@ -52,6 +54,8 @@ class Match:
                 self._reward = 0
                 print("Incorrect ! You lose")
                 break
+
+            print("==============================")
 
             player_choice = input("Do you want to continue (y/n):")
             while (player_choice != "y" and player_choice != "n"):
