@@ -1,12 +1,14 @@
-from Card import Card , group, suite
+from card import Card , group, suite
 import random
 
 class Desk:
     _cards: list[Card] = []
-
+#try
     def __init__(self) -> None:
-        self.init_desk()
-        pass
+        try:
+            self.init_desk()
+        except Exception as a:
+            print("Error occurred during initialization: ", a)
 
     def init_desk(sefl):
         for group_item in group.keys():

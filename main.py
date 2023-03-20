@@ -1,5 +1,5 @@
-from Match import Match
-from Player import Player
+from match import Match
+from player import Player
 import os
 
 player = Player()

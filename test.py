@@ -1,10 +1,10 @@
 import pytest
-from Card import Card
-from Desk import Desk
-from Player import Player
-from Match import Match
+from card import Card
+from desk import Desk
+from player import Player
+from match import Match
 
-
+# pytest trong cả 2 trường hợp này định nghĩa một fixture này có thể được sử dụng trong các bài kiểm tra khác nhau, tránh việc phải lặp đi lặp lại các đối tượng giống nhau
 @pytest.fixture
 def card_1():
     return Card("2", "Club")
@@ -22,6 +22,7 @@ def test_is_greater_than(card_1, card_2):
 
 
 # Desk
+# pytest trong trường hợp fixture desk này được sử dụng trong các bài kiểm tra khác nhau để cung cấp 1 instance của class Desk và thực hiện kiểm tra nó.
 @pytest.fixture
 def desk():
     return Desk()
